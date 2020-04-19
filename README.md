@@ -2,6 +2,6 @@
 
 This repository is for studing the modern web technology by myself.
 
-# architecture
+# Architecture
 
-
+![architecture](/doc/img/architecture.png)
