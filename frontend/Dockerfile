@@ -1,18 +1,26 @@
-FROM node:lts-slim
-
-ARG WORKUSR=frontend
+FROM node:lts-buster-slim
 
 RUN apt update \
     && apt install -y \
         git \
+        nginx \
         whois \
-    && rm -rf /var/lib/apt/lists/* \
-    && useradd -m -p `echo "$WORKUSR" | mkpasswd -s -m sha-512` -s /bin/bash $WORKUSR \
-    && mkdir /project \
-    && chown -R $WORKUSR:$WORKUSR /project \
-    && npm install -g @angular/cli \
+    && rm -rf /var/lib/apt/lists/*
+
+ARG NG_VER=9.0.3
+RUN npm install -g \
+        @angular/animations@${NG_VER} \
+        @angular/cli@${NG_VER} \
+        @angular/common@${NG_VER} \
+        @angular/core@${NG_VER} \
+        @angular/forms@${NG_VER} \
+        @angular/platform-browser@${NG_VER} \
+        primeicons \
+        primeng \
+        rxjs@6.5.3 \
+        tslib@1.10.0 \
+        zone.js@0.10.2 \
     && npm cache clean -f
 
-USER $WORKUSR
-WORKDIR /project
+WORKDIR /app
 

@@ -4,12 +4,19 @@ services:
   #proxy:
   #  image: nginx:stable
 
-  #frontend:
-  #  build:
-  #    context: ./frontend
-  #    dockerfile: ./Dockerfile
-  #  environment:
-  #    NODE_PATH: /usr/local/lib/node_modules
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    environment:
+      LOCALUID: 1000
+      LOCALGID: 1000
+      NODE_PATH: /usr/local/lib/node_modules
+    volumes:
+      - ./frontend/entrypoint.sh:/entrypoint.sh:ro
+    entrypoint: "/entrypoint.sh"
+    command: "bash"
+    tty: true
 
   backend:
     image: kudoshunsuke/booking-system-backend
