@@ -1,0 +1,23 @@
+
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="menubar">
+  <h1>
+    Booking System
+  </h1>
+</div>
+<div class="content">
+
+  <div class="my-sidebar">
+    <p-calendar [(ngModel)]="value" [inline]="true" [showWeek]="true"></p-calendar><br/>
+    <p-listbox [options]="facilities" [(ngModel)]="selectedFacilities" [multiple]="true" [checkbox]="true" [filter]="true" optionLabel="name">
+      <p-header>
+        Facilities
+      </p-header>
+    </p-listbox>
+    <p>Selected Facilities: <span *ngFor="let c of selectedFacilities" style="margin-right: 10px">{{c.name}}</span></p>
+  </div>
+
+  <div class="my-main">
+  </div>
+</div>
+<router-outlet></router-outlet>

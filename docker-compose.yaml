@@ -14,9 +14,13 @@ services:
       NODE_PATH: /usr/local/lib/node_modules
     volumes:
       - ./frontend/entrypoint.sh:/entrypoint.sh:ro
+      - ./frontend/app:/app
+      - ./frontend/.bashrc:/home/node/.bashrc
     entrypoint: "/entrypoint.sh"
     command: "bash"
     tty: true
+    ports:
+      - "18080:8080"
 
   backend:
     image: kudoshunsuke/booking-system-backend
