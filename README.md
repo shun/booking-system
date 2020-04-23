@@ -1,7 +1,7 @@
 # What this ?
 
-This repository is for studing the modern web technology by myself.
+This repository is for studing the modern web technology for me.
 
-# architecture
+# Architecture
 
-
+![architecture](/doc/img/architecture.png)
