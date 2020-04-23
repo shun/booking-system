@@ -5,6 +5,7 @@ services:
   #  image: nginx:stable
 
   frontend:
+    image: kudoshunsuke/booking-system-frontend
     build:
       context: ./frontend
       dockerfile: ./Dockerfile
