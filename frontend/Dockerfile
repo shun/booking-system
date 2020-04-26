@@ -1,14 +1,13 @@
 FROM node:lts-buster-slim
 
+ARG NG_VER=9.0.3
 RUN apt update \
     && apt install -y \
         git \
         nginx \
         whois \
-    && rm -rf /var/lib/apt/lists/*
-
-ARG NG_VER=9.0.3
-RUN npm install -g \
+    && rm -rf /var/lib/apt/lists/* \
+    && npm install -g \
         @angular/animations@${NG_VER} \
         @angular/cli@${NG_VER} \
         @angular/common@${NG_VER} \

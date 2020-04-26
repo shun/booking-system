@@ -1,0 +1,50 @@
+.my-sidebar {
+  position: relative;
+  height: 100%;
+  width: 30%;
+  top: 100px;
+  left: 0px;
+}
+
+.my-main {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  height: 100%;
+  width: 100%;
+}
+
+.timeline-pane {
+  position: relative;
+  overflow: auto;
+}
+
+.timeline-body {
+  position: absolute;
+  width: inherit;
+  height: 80px;
+
+}
+
+.timeline-cell-00 {
+  position: absolute;
+  background-color: #E6E6FA;
+  top: 0px;
+  width: -webkit-calc(100%/48.0);
+  width: calc(100%/48.0);
+  height: 60px;
+  border: 1px solid #000;
+  border-right: 1px dashed #000;
+}
+
+.timeline-cell-30 {
+  position: absolute;
+  background-color: #E6E6FA;
+  top: 0px;
+  width: -webkit-calc(100%/48.0);
+  width: calc(100%/48.0);
+  height: 60px;
+  border: 1px solid #000;
+  border-left: 1px dashed #000;
+
+}

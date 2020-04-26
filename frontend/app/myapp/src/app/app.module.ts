@@ -11,10 +11,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {CalendarModule} from 'primeng/calendar';
 import {ListboxModule} from 'primeng/listbox';
+import { TimelaneComponent } from './timelane/timelane.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TimelaneComponent
   ],
   imports: [
     BrowserModule,
