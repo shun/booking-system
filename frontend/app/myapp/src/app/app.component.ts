@@ -30,5 +30,8 @@ export class AppComponent {
       {name: "room11"},
       {name: "room12"},
     ];
+
+    this.selectedFacilities= [
+    ];
   }
 }

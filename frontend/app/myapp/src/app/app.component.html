@@ -18,7 +18,9 @@
   </div>
 
   <div class="my-main">
-    <app-timelane></app-timelane>
+    <div class="timeline-pane">
+        <app-timelane class="pos-relative" *ngFor="let tl of selectedFacilities"></app-timelane>
+    </div>
   </div>
 </div>
 <router-outlet></router-outlet>
